@@ -33,6 +33,9 @@ dependencies:
   # UI
   pin_code_fields: ^8.0.1
   country_code_picker: ^3.0.0
+  #Maps
+  google_maps_flutter: ^2.5.3
+  location: ^5.0.3
 
 
 dev_dependencies:
