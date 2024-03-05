@@ -69,7 +69,7 @@ class _LoginContent extends StatelessWidget {
             SizedBox(height: 32.height),
             AppButton(
               title: "pick_up_location".tr(),
-              onTap: () {},
+              onTap: () => RouteUtils.navigateTo(const PickLocation()),
               linearColor: true,
             ),
             SizedBox(height: 32.height),

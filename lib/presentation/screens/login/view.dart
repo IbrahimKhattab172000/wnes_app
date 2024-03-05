@@ -8,9 +8,11 @@ import 'package:wnes_app/business_logic/helpers/colors.dart';
 import 'package:wnes_app/business_logic/helpers/dimentions.dart';
 import 'package:wnes_app/business_logic/helpers/utils.dart';
 import 'package:wnes_app/business_logic/routing/routes.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 part 'units/appbar.dart';
 part 'units/login_content.dart';
+part 'units/pick_location.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
