@@ -70,30 +70,12 @@ class _IncubatorsViewState extends State<IncubatorsView> {
         ),
       ),
     );
-
-    //     Stack(
-    //   children: [
-    //     GoogleMap(
-    //       markers: markers,
-    //       onMapCreated: (controller) {
-    //         googleMapController = controller;
-    //       },
-    //       initialCameraPosition: initialCameraPosition,
-    //     ),
-    //   ],
-    // );
-  }
-
-  initMapStyle() async {
-    var nightMapStyle = await DefaultAssetBundle.of(context)
-        .loadString("assets/map_styles/night_map_style.json");
-    googleMapController!.setMapStyle(nightMapStyle);
   }
 
   initMarkers() async {
     var customMarkerIcon = BitmapDescriptor.fromBytes(
       await locationService.getImageFromRawData(
-          image: Utils.getAssetPNGPath("marker"), width: 150),
+          image: Utils.getAssetPNGPath("marker"), width: 200),
     );
     var myMarkers = places
         .map(
