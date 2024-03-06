@@ -51,7 +51,7 @@ class AppText extends StatelessWidget {
             decorationStyle: TextDecorationStyle.solid,
             decorationColor: color,
             fontWeight: fontWeight,
-            fontFamily: fontFamily ?? "lotta",
+            fontFamily: fontFamily ?? "Tajawal",
           ),
           overflow: overflow,
           maxLines: maxLines,

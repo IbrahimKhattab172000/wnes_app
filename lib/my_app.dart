@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
           theme: ThemeData(
             hoverColor: Colors.transparent,
             useMaterial3: false,
-            fontFamily: "Tajawal",
+            fontFamily: 'Tajawal',
             scaffoldBackgroundColor: AppColors.background,
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
