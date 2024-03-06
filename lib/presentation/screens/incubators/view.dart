@@ -45,24 +45,24 @@ class _IncubatorsViewState extends State<IncubatorsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomGoogleMapMarkerBuilder(
-        customMarkers: 
-        
-        [
-          MarkerData(
-            marker: Marker(
-              markerId: MarkerId(places[0].id.toString()),
-              position: places[0].latLng,
-              infoWindow: InfoWindow(
-                title: places[0].name,
-                snippet: "Fixed Label",
+        customMarkers: places
+            .map(
+              (place) => MarkerData(
+                marker: Marker(
+                  markerId: MarkerId(place.id.toString()),
+                  position: place.latLng,
+                  infoWindow: InfoWindow(
+                    title: place.name,
+                    snippet: "Fixed Label",
+                  ),
+                ),
+                child: AppMapMarker(
+                  image: "marker",
+                  title: place.name,
+                ),
               ),
-            ),
-            child: AppMapMarker(
-              imagePath: "marker",
-              title: places[0].name,
-            ),
-          ),
-        ],
+            )
+            .toList(),
         builder: (_, markers) => GoogleMap(
           markers: markers ?? {},
           initialCameraPosition: initialCameraPosition,

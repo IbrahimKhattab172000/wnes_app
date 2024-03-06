@@ -6,12 +6,12 @@ import 'package:wnes_app/business_logic/helpers/utils.dart';
 
 class AppMapMarker extends StatelessWidget {
   final String title;
-  final String imagePath;
+  final String image;
   const AppMapMarker({
     Key? key,
     this.onTap,
     required this.title,
-    required this.imagePath,
+    required this.image,
   }) : super(key: key);
 
   final VoidCallback? onTap;
@@ -24,7 +24,7 @@ class AppMapMarker extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         children: [
           Image.asset(
-            Utils.getAssetPNGPath(imagePath),
+            Utils.getAssetPNGPath(image),
             height: 64.height,
             width: 64.width,
           ),
