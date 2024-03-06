@@ -10,6 +10,7 @@ class PickLocation extends StatefulWidget {
 class _PickLocationState extends State<PickLocation> {
   late CameraPosition initialCameraPosition;
   late LatLng selectedLocation;
+  BitmapDescriptor? markerIcon;
 
   @override
   void initState() {
@@ -48,9 +49,10 @@ class _PickLocationState extends State<PickLocation> {
         },
         markers: {
           Marker(
-            markerId: const MarkerId('selectedLocation'),
+            markerId: const MarkerId(
+              'selectedLocation',
+            ),
             position: selectedLocation,
-            icon: BitmapDescriptor.defaultMarker,
           ),
         },
       ),

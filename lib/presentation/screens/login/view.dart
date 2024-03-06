@@ -9,6 +9,7 @@ import 'package:wnes_app/business_logic/helpers/dimentions.dart';
 import 'package:wnes_app/business_logic/helpers/utils.dart';
 import 'package:wnes_app/business_logic/routing/routes.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:wnes_app/presentation/screens/incubators/view.dart';
 
 part 'units/appbar.dart';
 part 'units/login_content.dart';

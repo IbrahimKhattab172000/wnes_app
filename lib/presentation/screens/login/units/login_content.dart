@@ -75,7 +75,7 @@ class _LoginContent extends StatelessWidget {
             SizedBox(height: 32.height),
             AppButton(
               title: "login".tr(),
-              onTap: () {},
+              onTap: () => RouteUtils.navigateTo(const IncubatorsView()),
               linearColor: true,
             ),
             SizedBox(height: 24.height),
