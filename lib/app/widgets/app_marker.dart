@@ -25,8 +25,8 @@ class AppMapMarker extends StatelessWidget {
         children: [
           Image.asset(
             Utils.getAssetPNGPath(image),
-            height: 64.height,
-            width: 64.width,
+            height: 52.height,
+            width: 50.width,
           ),
           AppText(
             title: title,
@@ -34,6 +34,8 @@ class AppMapMarker extends StatelessWidget {
             fontWeight: FontWeight.w700,
             color: AppColors.black,
             textAlign: TextAlign.center,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 1,
           ),
         ],
       ),
