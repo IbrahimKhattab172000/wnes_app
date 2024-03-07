@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "360902194244",
+    "project_id": "wnes-app",
+    "storage_bucket": "wnes-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360902194244:android:082f12607d5a0dc2fdf811",
+        "android_client_info": {
+          "package_name": "com.example.wnes_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2RPNpH5NRaQOhOUSY0QVQoqVoCFJyDWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
