@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wnes_app/app/widgets/app_text.dart';
 import 'package:wnes_app/business_logic/helpers/colors.dart';
 import 'package:wnes_app/business_logic/helpers/dimentions.dart';
 import 'package:wnes_app/business_logic/helpers/utils.dart';
+import 'package:wnes_app/presentation/screens/notification/view.dart';
 
 class NotificationDialog {
   static void show({
@@ -56,6 +58,37 @@ class NotificationDialog {
           ],
         );
       },
+    );
+  }
+
+  static showIosDialog({
+    required BuildContext context,
+    required String title,
+    required String body,
+  }) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) => CupertinoAlertDialog(
+        title: Text(title),
+        content: Text(body),
+        actions: [
+          CupertinoDialogAction(
+            isDefaultAction: true,
+            child: const Text('Ok'),
+            onPressed: () async {
+              Navigator.of(context, rootNavigator: true).pop();
+              await Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const NotificationView(
+                    body: {},
+                  ),
+                ),
+              );
+            },
+          )
+        ],
+      ),
     );
   }
 }
