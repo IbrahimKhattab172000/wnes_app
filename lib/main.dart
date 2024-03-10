@@ -9,8 +9,9 @@ void main() async {
 
   await Future.value([
     await EasyLocalization.ensureInitialized(),
-    await Firebase.initializeApp(),
-    await FirebaseMessagingUtils.instance.initNotifications(),
+    // await Firebase.initializeApp(),
+    await NotificationHelper.init(),
+    await NotificationHelper.onInit(),
   ]);
 
   runApp(
